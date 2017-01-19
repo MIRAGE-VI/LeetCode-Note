@@ -6,7 +6,6 @@ public class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> hm = new HashMap<>();                                         //the format should be HashMap<>()
         for(int i = 0; i < nums.length; i++){
-            //int complement = target - nums[i];                                            use this line will add another 1 ms
             if(hm.containsKey(target - nums[i]))
             return new int[] {hm.get(target - nums[i]), i};                                 //hash.get(key)
             hm.put(nums[i], i);
